@@ -9,16 +9,18 @@
   "dependencies": {
     "cloudup-client": "github:zeke/cloudup-client",
     "dotenv-safe": "^4.0.4",
+    "download": "^6.2.5",
     "limiter": "^1.1.2",
     "lodash": "^4.17.4",
     "make-dir": "^1.0.0",
-    "parse-link-header": "^1.0.1"
+    "parse-link-header": "^1.0.1",
+    "require-dir": "^0.3.2"
   },
   "devDependencies": {
     "standard": "^10.0.3"
   },
   "scripts": {
     "test": "standard --fix",
-    "start": "node index.js"
+    "start": "node index.js && node download.js"
   }
 }
