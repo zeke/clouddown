@@ -1,29 +1,22 @@
 {
   "name": "clouddown",
-  "version": "1.0.0",
-  "description": "Download your CloudUp files",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zeke/clouddown.git"
-  },
+  "description": "Download all your CloudUp files",
   "preferGlobal": true,
-  "keywords": [
-    "cloudup",
-    "cloud",
-    "download"
-  ],
-  "author": "zeke",
+  "version": "1.0.0",
+  "main": "index.js",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zeke/clouddown/issues"
-  },
-  "homepage": "https://github.com/zeke/clouddown#readme",
   "dependencies": {
-    "cloudup-client": "^0.3.2",
-    "osenv": "^0.1.3"
+    "cloudup-client": "github:zeke/cloudup-client",
+    "dotenv-safe": "^4.0.4",
+    "limiter": "^1.1.2",
+    "lodash": "^4.17.4",
+    "make-dir": "^1.0.0",
+    "parse-link-header": "^1.0.1"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
+  },
+  "scripts": {
+    "test": "standard --fix"
   }
 }
