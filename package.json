@@ -2,6 +2,7 @@
   "name": "clouddown",
   "description": "Download all your CloudUp files",
   "preferGlobal": true,
+  "private": true,
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -17,6 +18,7 @@
     "standard": "^10.0.3"
   },
   "scripts": {
-    "test": "standard --fix"
+    "test": "standard --fix",
+    "start": "node index.js"
   }
 }
