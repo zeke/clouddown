@@ -8,7 +8,6 @@ const fileDir = path.join(__dirname, 'files')
 const files = Object.values(requireDir('./metadata'))
   // .slice(0,10)
 
-// console.log(files[0])
 downloadFile()
 
 function downloadFile(i = 0) {
@@ -28,7 +27,7 @@ function downloadFile(i = 0) {
   const thumb = file.thumbs.find(thumb => thumb.size.width === 3000)
   
   if (!thumb) return next()
-    
+
   const url = thumb.url
   const thumbFilename = url
     .replace('https://cldup.com/', '')

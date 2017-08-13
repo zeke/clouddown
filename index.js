@@ -11,6 +11,9 @@ const client = new Cloudup({
 })
 let files = []
 
+mkdirp(path.join(__dirname, 'files'))
+mkdirp(path.join(__dirname, 'metadata'))
+
 getPage()
 
 function getPage (page = 1) {
