@@ -1,17 +1,32 @@
 # clouddown 
 
-Download all your CloudUp files
+Download all your [CloudUp](https://cloudup.com/) files.*
 
-## Installation
+CloudUp is a nice filesharing service with a little app that runs 
+inconspicuously on your computer, uploading every screenshot you take and putting
+shareable URLs to those screenshots on your clipboard. I used it daily for a 
+number of years, but since it was
+[acquired by Automattic](https://en.blog.wordpress.com/2013/09/25/cloudup-joins-the-automattic-family/)
+in 2013, the service has not improved much, has not introduce
+a paid plan, and they recently disabled zip downloads entirely to thwart
+piracy.
 
-This module is a bit scrappy, so it's not published to npm. Install it directly
-from GitHub:
+I fear that CloudUp will one day disappear entirely, so I wrote this tool
+to download everything I uploaded to it over the last few years.
 
-```sh
-npm i -g zeke/clouddown
-```
+`*` Note: Clouddown currently **only downloads image files**, as the CloudUp API no 
+longer returns direct URLs for files. I'm working with Automattic support to 
+see if there's a way around this.
 
 ## Usage
+
+This module is a bit scrappy, so it's not published to npm.
+
+```sh
+git clone https://github.com/zeke/clouddown
+cd clouddown
+npm install
+```
 
 Create a `.env` file and add your CloudUp email and password to it:
 
@@ -25,12 +40,8 @@ Then:
 npm start
 ```
 
-## Tests
-
-```sh
-npm install
-npm test
-```
+This will generate a  `metadata` directory full of JSON data about every file,
+and a `files` directory to contain the downloaded files.
 
 ## Dependencies
 
